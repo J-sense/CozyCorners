@@ -13,9 +13,14 @@ export default {
       },
       fontFamily:{
         'primary':'Poppins", sans-serif'
-      }
+      },
+      container: {
+        center: true,
+        screens: {
+          '2xl': '1200px', // Setting the container width for 2xl screens to 1000px
+        },
     },
   },
   plugins: [],
 }
-
+}

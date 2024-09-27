@@ -1,10 +1,12 @@
 import React from 'react'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routes'
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-primary font-primary'>every thing is ok nothing is happend to me</h1>
-    </div>
+    <RouterProvider router={router}> 
+      
+    </RouterProvider>
   )
 }
 

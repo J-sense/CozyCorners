@@ -12,7 +12,8 @@ export default {
         'secondary-bg':'#f7f7f7',
       },
       fontFamily:{
-        'primary':'Poppins", sans-serif'
+        'primary':'Poppins", sans-serif',
+        'navfont' :'Poppins", sans-serif'
       },
       container: {
         center: true,

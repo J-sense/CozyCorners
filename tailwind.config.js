@@ -11,10 +11,12 @@ export default {
         'secondary':'#1e1e1e',
         'secondary-bg':'#f7f7f7',
       },
-      fontFamily:{
-        'primary':'Poppins", sans-serif',
-        'navfont' :'Poppins", sans-serif'
+      fontFamily: {
+        'primary': ['Poppins', 'sans-serif'],
+        'navfont': ['Poppins', 'sans-serif'],
+        'bannerfont': ['Marcellus', 'serif'],
       },
+      
       container: {
         center: true,
         screens: {

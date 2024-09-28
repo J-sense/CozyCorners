@@ -1,15 +1,17 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Navbar from './Navbar'
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Main = () => {
   return (
     <div>
       <Navbar />
-      <Outlet></Outlet>
+      <main className="min-h-screen">
+        <Outlet></Outlet>
+      </main>
       <footer>Footer</footer>
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

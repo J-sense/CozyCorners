@@ -45,12 +45,12 @@ const Products = ({ headline }) => {
         </div>
         {visible < filltering.length && (
           <button
-            className="relative z-10 flex justify-center items-center gap-2 mx-auto overflow-hidden rounded-full bg-[#DD7210] text-gray-50 shadow-xl px-8 py-2 group transition-all duration-300 before:absolute before:inset-0 before:rounded-full before:bg-white before:transition-all before:duration-500 before:scale-0 group-hover:before:scale-100"
+            className="relative font-bannerfont mt-10 z-10 flex justify-center items-center gap-2 mx-auto overflow-hidden rounded-full bg-[#DD7210] text-gray-50 shadow-xl px-8 py-2 group transition-all duration-300 before:absolute before:inset-0 before:rounded-full before:bg-white before:transition-all before:duration-500 before:scale-0 group-hover:before:scale-100"
             type="submit"
             onClick={handleLoadMore}
           >
-            Shop Now
-            <div className="flex items-center justify-center w-8 h-8 border-2 border-gray-50 rounded-full bg-white">
+            Load More
+            <div className="flex items-center justify-center w-8 h-8 border-2  border-gray-50 rounded-full bg-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 19"

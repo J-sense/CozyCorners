@@ -1,4 +1,5 @@
 import React from "react";
+import Loadmorebtn from "../shared/Loadmorebtn";
 
 const Whychooseus = () => {
   const content = [
@@ -31,6 +32,7 @@ const Whychooseus = () => {
             <div className="bg-slate-100 md:bg-white md:rounded-none rounded-md md:p-0 p-5">
               <h1 className="text-black font-bold uppercase text-base font-navfont" >{item.title}</h1>
               <p className="tracking-tight text-gray-500 mt-3">{item.heading}</p>
+              <Loadmorebtn>More info</Loadmorebtn>
             </div>
           ))}
         </div>

@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { getImgUrl } from "../../utils/getImgUrl";
 import Rating from "./Rating";
 import { FaPlus } from "react-icons/fa";
+import { ThemeContext } from "../shared/Context/Themecontextprovider";
 
 const ProductsCart = ({ products }) => {
+  const {isDarkMode} = useContext(ThemeContext)
   return (
-    <div className="">
-      <div  className="bg-[#fafafa] rounded-md ">
+    <div className={`${isDarkMode ? ' rounded-md shadow-md shadow-slate-200' : ''}`}>
+      <div  className={`bg-[#fafafa]  rounded-md ${isDarkMode ? 'bg-slate-200 border rounded-lg' : ''}`}>
         <img src={getImgUrl(`${products.imageUrl}`)} alt="" />
       </div>
-      <div className="py-6 bg-white dark:bg-black shadow-sm p-3 font-bannerfont">
+      <div className={`py-6 bg-white dark:bg-black shadow-sm p-3 font-bannerfont ${isDarkMode ? 'bg-gray-900  rounded-lg' : ''}`}>
         <h4>{products.category}</h4>
         <h3 className="font-semibold text-xl mb-2">
             {products.name}

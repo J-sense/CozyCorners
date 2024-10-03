@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./styles.css";
 import { Navigation } from "swiper/modules";
-import slider1 from "/banner1.jpg"
-import slider2 from "/slider2.jpg"
-import slider3 from "/slider3.jpg"
+import slider1 from "/banner1.jpg";
+import slider2 from "/slider2.jpg";
+import slider3 from "/slider3.jpg";
+import { ThemeContext } from "../shared/Context/Themecontextprovider";
+import { LuSunMoon } from "react-icons/lu";
+import { LuMoonStar } from "react-icons/lu";
 
 const Hero = () => {
+  const { isDarkMode, handleToggle } = useContext(ThemeContext);
+  console.log(isDarkMode);
   const content = [
     {
       title: "Discover Furniture's For Living",
@@ -80,12 +85,18 @@ const Hero = () => {
                 </button>
               </div>
             </div>
-            <div className="absolute inset-x-0 bottom-0 -mb-2 h-3/4 bg-gradient-to-t from-zinc-600 via-transparent to-transparent blur-sm">
-
-            </div>
+            <div className="absolute inset-x-0 bottom-0 -mb-2 h-3/4 bg-gradient-to-t from-zinc-600 via-transparent to-transparent blur-sm"></div>
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="absolute bottom-28 right-20 z-40">
+        <button
+          className="focus:outline-none font-bold text-lg p-5 bg-black rounded-full"
+          onClick={handleToggle}
+        >
+          {isDarkMode ? <LuSunMoon className="text-yellow-300"/> : <LuMoonStar className="text-yellow-300"/>}
+        </button>
+      </div>
     </>
   );
 };

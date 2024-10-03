@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 // import Loadmorebtn from "../shared/Loadmorebtn";
 import Headline from "../shared/Headline";
 import imgae1 from "../../assets/assets/reviewer1.png";
 import imgae2 from "../../assets/assets/reviewer2.png";
 import imgae3 from "../../assets/assets/reviewer3.png";
+import { ThemeContext } from "../shared/Context/Themecontextprovider";
 
 const Testmonial = () => {
+  const {isDarkMode} = useContext(ThemeContext)
   return (
-    <div className="section-container">
+    <div className={`section-container ${isDarkMode ?'bg-gray-900' :'bg-white text-black'}`}>
       <div className="text-center mb-12">
         <h1 className="uppercase font-bannerfont text-primary font-base">
           Testmonial
@@ -17,11 +19,11 @@ const Testmonial = () => {
       <div className="md:flex justify-center item-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           {testimonials.map((item, idx) => (
-            <div key={idx} className="p-4 bg-white shadow-lg rounded-lg">
+            <div key={idx} className={`p-4  shadow-lg rounded-lg ${isDarkMode ?"bg-zinc-900 text-white":" text-black"}`}>
               <img
                 src={item.image}
                 alt={item.name}
-                className="mx-auto mb-4 w-24 h-24 rounded-full"
+                className="mx-auto mb-4 w-14 h-14 rounded-full object-contain"
               />
               <h1 className="text-xl font-semibold mb-2">{item.name}</h1>
               <p className="text-gray-600">{item.testimonial}</p>

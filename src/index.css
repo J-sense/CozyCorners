@@ -8,3 +8,6 @@
 .section-container{
     @apply  container mx-auto py-6 px-4;
 }
+.dark{
+    @apply  bg-gray-900 text-white;
+}

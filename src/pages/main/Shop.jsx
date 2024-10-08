@@ -2,7 +2,7 @@ import React from "react";
 import bannerimg from "../../assets/assets/banner.png";
 import Headline from "../../components/shared/Headline";
 import Products from "../../components/ui/Products";
-import ProductsCart from "../../components/ui/ProductsCart";
+
 const Shop = () => {
   return (
     <section className="">

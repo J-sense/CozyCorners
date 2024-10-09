@@ -3,6 +3,7 @@ import bannerimg from "../../assets/assets/about.jpg";
 import Headline from "../../components/shared/Headline";
 import Products from "../../components/ui/Products";
 import WeDesign from "../../components/ui/about/WeDesign";
+import Designers from "../../components/ui/about/Designers";
 // import Headline from '../../components/shared/Headline'
 
 const About = () => {
@@ -16,6 +17,7 @@ const About = () => {
       </div>
       <div className="section-container">
         <WeDesign />
+        <Designers />
        
       </div>
     </section>
